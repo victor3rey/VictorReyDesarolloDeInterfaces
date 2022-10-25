@@ -14,13 +14,13 @@ public class Person {
     private final SimpleStringProperty Nombre;
     private final SimpleStringProperty Apellido;
     private final SimpleStringProperty email;
-    private final SimpleIntegerProperty Edad;
+    private final SimpleIntegerProperty Donacion;
  
-    public Person(String fNombre, String fApellido, String femail, Integer Edad) {
+    public Person(String fNombre, String fApellido, String femail, Integer Donacion) {
         this.Nombre = new SimpleStringProperty(fNombre);
         this.Apellido = new SimpleStringProperty(fApellido);
         this.email = new SimpleStringProperty(femail);
-        this.Edad = new SimpleIntegerProperty(Edad);
+        this.Donacion = new SimpleIntegerProperty(Donacion);
     }
  
     public String getNombre() {
@@ -45,11 +45,11 @@ public class Person {
         email.set(femail);
     }
 
-	public Integer getEdad() {
-		return Edad.get();
+	public Integer getDonacion() {
+		return Donacion.get();
 	}
-	public void setEdad(Integer fEdad) {
-		Edad.set(fEdad);
+	public void setDonacion(Integer fDonacion) {
+		Donacion.set(fDonacion);
     }        
         
 }
