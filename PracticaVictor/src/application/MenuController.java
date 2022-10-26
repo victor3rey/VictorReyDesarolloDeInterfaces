@@ -70,6 +70,20 @@ public class MenuController {
 			e.printStackTrace();
 		}
     }
+    @FXML
+    private void abrirFormulario4(ActionEvent event) {    	
+    	try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MenuController.class.getResource("/basicoDinamico/Tutorial.fxml"));
+			BorderPane listadoControles = (BorderPane) loader.load();
+
+			// Se sitúa en el centro del diseño principal
+			rootLayout.setCenter(listadoControles);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
    
     
     @FXML

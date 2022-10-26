@@ -5,8 +5,6 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -22,11 +20,10 @@
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="76.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="118.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="233.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
       <Label text="Socio">
@@ -54,31 +51,12 @@
          </GridPane.margin>
       </Label>
       <ComboBox fx:id="combo1" editable="false" prefHeight="25.0" prefWidth="163.0" promptText="Seleccione un valor..." visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="Miembros" GridPane.rowIndex="3">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </Label>
-      <TableView fx:id="table1" fixedCellSize="30.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <columns>
-            <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="Nombre" />
-            <TableColumn fx:id="lastNameCol" prefWidth="112.0" text="Apellidos" />
-            <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="105.0" text="Email" />
-            <TableColumn fx:id="ageColumn" prefWidth="88.0" text="Donaciones" />
-         </columns>
-         <GridPane.margin>
-            <Insets bottom="10.0" right="10.0" />
-         </GridPane.margin>
-      </TableView>
-      <TreeView fx:id="tree1" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <TreeView fx:id="tree1" editable="false" prefHeight="160.0" prefWidth="347.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="10.0" right="10.0" />
          </GridPane.margin>
       </TreeView>
-      <Label text="Información extra" textAlignment="JUSTIFY" GridPane.rowIndex="4">
+      <Label text="Información extra" textAlignment="JUSTIFY" GridPane.rowIndex="3">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -89,12 +67,18 @@
       <CheckBox alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="164.0" text="Marque si usted es socio." textAlignment="RIGHT" GridPane.columnIndex="1" />
       <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <ImageView fx:id="myimageView" fitHeight="90.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="5.0">
+            <ImageView fx:id="myimageView" fitHeight="162.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="5.0">
                <image>
                   <Image url="@../image/panda.png" />
                </image>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
             </ImageView>
-            <Button fx:id="myButton" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#displayImage" prefHeight="25.0" prefWidth="67.0" text="Siguiente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" translateX="150.0" />
+            <Button fx:id="myButton" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#displayImage" prefHeight="25.0" prefWidth="67.0" text="Siguiente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" translateX="150.0">
+               <FlowPane.margin>
+                  <Insets right="60.0" />
+               </FlowPane.margin></Button>
          </children>
       </FlowPane>
    </children>

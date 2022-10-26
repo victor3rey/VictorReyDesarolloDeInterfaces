@@ -27,31 +27,12 @@ public class ListController  extends Application{
     private TableView<Person> table1;
     
     @FXML
-    private TableColumn<Person, String> firstNameCol;
-
-    @FXML
-    private TableColumn<Person, String> lastNameCol;
-
-    @FXML
-    private TableColumn<Person, String> emailCol;
-    
-    @FXML
-    private TableColumn<Person, Integer> ageColumn;
-    
-    @FXML
     private TreeView<String> tree1;
     
     
     
    
-     // Lista auxiliar para TableView
-    private ObservableList<Person> data = FXCollections.observableArrayList(
-    	    new Person("Victor", "Rey", "victorrey@hotmail.com", 150),
-    	    new Person("Fernando", "Alonso", "Falonso@hotmail.com", 1000),
-    	    new Person("Serena", "Williams", "Serena.williams@gmail.com", 2000),
-    	    new Person("Emma", "Jones", "emma.jones@outlook.com", 3000),
-    	    new Person("Michael", "b.Jordan", "michaelb.Jordan@gmail.com", 3500)
-    	);
+    
     @FXML
      Button myButton;
     @FXML
@@ -76,23 +57,7 @@ public class ListController  extends Application{
         combo1.getItems().addAll("50€", "100€", "150€", "200€", "250€", "500€",
         		"1000€", "1500€", "2000€");
                 
-       
-        
-     
-        
-       
-        
-        
-       
-       
-        // Asociamos cada columna del TableView a una propiedad de la clase Person 
-        firstNameCol.setCellValueFactory(new PropertyValueFactory<Person,String>("Nombre"));
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<Person,String>("Apellido"));
-        emailCol.setCellValueFactory(new PropertyValueFactory<Person,String>("email"));
-        ageColumn.setCellValueFactory(new PropertyValueFactory<Person,Integer>("Donacion"));
-        // Se rellena la tabla con objetos de la clase Person
-        table1.setItems(data);     
-        
+      
         
         // items para el TreeView
         // item raiz
@@ -100,14 +65,18 @@ public class ListController  extends Application{
 
         // item de primer nivel
         TreeItem<String> webItem = new TreeItem<String>("Animales");
-        webItem.getChildren().add(new TreeItem<String>("Panda"));
-        webItem.getChildren().add(new TreeItem<String>("Mono Dorado"));
+        webItem.getChildren().add(new TreeItem<String>("PANDA"));
+        webItem.getChildren().add(new TreeItem<String>("El panda, es una especie de mamífero del orden de los carnívoros. "
+        		+ "El estudio de su ADN lo engloba entre los miembros de la familia de los osos,siendo el oso de anteojos su pariente más cercano, "
+        		+ "que pertenece a la subfamilia de los tremarctinos"));
+        webItem.getChildren().add(new TreeItem<String>("MONO DORADO"));
+        webItem.getChildren().add(new TreeItem<String>("El langur chato dorado es una especie de primate catarrino"
+        		+ " de la familia Cercopithecidae endémica de China"));
         rootItem.getChildren().add(webItem);
         
         // Otro item de primer nivel
         TreeItem<String> javaItem = new TreeItem<String>("Socios");
-        javaItem.getChildren().add(new TreeItem<String>("extras de ser socios"));
-        javaItem.getChildren().add(new TreeItem<String>("donaciones"));
+        javaItem.getChildren().add(new TreeItem<String>("extras de ser socios: se le permite la visita a las reservas donde estos animales estan protegidos"));
         rootItem.getChildren().add(javaItem);
         
         // Para que sea editable necesitamos especificar un CellFactory con el tipo que corresponda

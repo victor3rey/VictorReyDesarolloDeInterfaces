@@ -93,7 +93,7 @@
                </padding>
             </Label>
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="registrarsebutton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#abrirFormulario" scaleY="1.07" scaleZ="1.07" text="Registrase" textAlignment="CENTER" translateX="140.0" translateY="54.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="registrarsebutton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#abrirFormulario" scaleY="1.07" scaleZ="1.07" stylesheets="@Style2.css" text="Registrase" textAlignment="CENTER" translateX="140.0" translateY="54.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font name="Cambria Bold Italic" size="17.0" />
                </font>

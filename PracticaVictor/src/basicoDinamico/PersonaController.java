@@ -62,7 +62,16 @@ public class PersonaController implements Initializable {
         this.colemail.setCellValueFactory(new PropertyValueFactory("email"));
         this.coldonacion.setCellValueFactory(new PropertyValueFactory("donacion"));
     }
-
+    private ObservableList<Persona> data = FXCollections.observableArrayList(
+    	    new Persona("Victor", "Rey",24, "victorrey@hotmail.com", 150),
+    	    new Persona("Fernando", "Alonso",43, "Falonso@hotmail.com", 1000),
+    	    new Persona("Serena", "Williams",35, "Serena.williams@gmail.com", 2000),
+    	    new Persona("Emma", "Jones",43, "emma.jones@outlook.com", 3000),
+    	    new Persona("Michael", "b.Jordan",25, "michaelb.Jordan@gmail.com", 3500)
+    	    
+    	);
+    
+    
     @FXML
     private void agregarPersona(ActionEvent event) {
 
@@ -108,6 +117,7 @@ public class PersonaController implements Initializable {
         }
 
     }
+    
 
     @FXML
     private void seleccionar(MouseEvent event) {
@@ -120,6 +130,8 @@ public class PersonaController implements Initializable {
             this.txtNombre.setText(p.getNombre());
             this.txtApellidos.setText(p.getApellidos());
             this.txtEdad.setText(p.getEdad() + "");
+            this.txtemail.setText(p.getEmail());
+            this.txtdonacion.setText(p.getDonacion()+"");
         }
 
     }
@@ -158,6 +170,8 @@ public class PersonaController implements Initializable {
                     p.setNombre(aux.getNombre());
                     p.setApellidos(aux.getApellidos());
                     p.setEdad(aux.getEdad());
+                    p.setEmail(aux.getEmail());
+                    p.setDonacion(aux.getDonacion());
 
                     // Refresco la tabla
                     this.tblPersonas.refresh();
@@ -186,7 +200,9 @@ public class PersonaController implements Initializable {
             }
 
         }
-
+    
+        
+        tblPersonas.setItems(data);    
     }
 
     @FXML

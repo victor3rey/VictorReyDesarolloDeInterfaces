@@ -1,7 +1,7 @@
 .root{
-    -fx-background-image: url("/image/wwf.png");
+    -fx-background-image: url("/image/wwf.png")center center cover no-repeat fixed;
     -fx-background-repeat: stretch;   
-    -fx-background-size: 900 600;
+    -fx-background-size: cover;
     -fx-background-position: center center;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
    
@@ -21,3 +21,13 @@
     -fx-text-fill: black;
 }
     
+ Button { -fx-background-color: #0a0a0a;
+         -fx-border-color: #FFFFFF;
+         -fx-border-width: 2;
+         -fx-text-fill: #FFFFFF;
+         -fx-font-family: "Times New Roman";
+         -fx-font-style: italic;
+         -fx-font-size: 10px;
+         -fx-background-radius: 10 10 10 10;
+         -fx-border-radius: 10 10 10 10;
+}
