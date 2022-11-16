@@ -49,10 +49,9 @@ public class PersonaController implements Initializable {
     @FXML
     private Button btnEliminar;
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
+    
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public void initialize(URL url, ResourceBundle rb) {
         personas = FXCollections.observableArrayList();
 

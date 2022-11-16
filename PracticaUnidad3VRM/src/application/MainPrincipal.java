@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -43,18 +44,14 @@ public class MainPrincipal extends Application {
 		    
 		        
 		     
-		        
+		        // EVENTO 
 		        scene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 		            @Override
 		            public void handle(MouseEvent mouseEvent) {
-		                System.out.println("pulsaste  boton  " + mouseEvent.getTarget());
-		            }
-		        });
-		        scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
-		            @Override
-		            public void handle(MouseEvent event) {
-		                System.out.println("Estas pulsando por la pantalla "+event.getSource());
-		            }
+		                System.out.println("Has pulsado sobre  " + mouseEvent.getTarget());
+		                
+		             
+		            }  
 		        });
 
 		} catch (Exception e) {

@@ -3,13 +3,7 @@ package otrasPestanas;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-/**
- * 
- * Clase auxiliar que se empleará para el modelo de datos del TableView
- * 
- * @author SBF
- * 
- */
+
 public class Person {
     private final SimpleStringProperty Nombre;
     private final SimpleStringProperty Apellido;
