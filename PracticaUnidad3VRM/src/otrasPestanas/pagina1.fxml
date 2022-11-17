@@ -8,78 +8,86 @@
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane minHeight="600.0" minWidth="550.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.ListController">
-   <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="89.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="76.0" vgrow="NEVER" />
-      <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="118.0" vgrow="NEVER" />
-      <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="233.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
-   </rowConstraints>
-   <children>
-      <Label text="Socio">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="10.0" />
-         </GridPane.margin>
-      </Label>
-      <Label text="Animal al que ayudar" GridPane.rowIndex="2">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="10.0" />
-         </GridPane.margin>
-      </Label>
-      <Label text="Donación" GridPane.rowIndex="1">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="10.0" />
-         </GridPane.margin>
-      </Label>
-      <ComboBox fx:id="combo1" editable="false" prefHeight="25.0" prefWidth="163.0" promptText="Seleccione un valor..." visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TreeView fx:id="tree1" editable="false" prefHeight="160.0" prefWidth="347.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <GridPane.margin>
-            <Insets bottom="10.0" right="10.0" />
-         </GridPane.margin>
-      </TreeView>
-      <Label text="Información extra" textAlignment="JUSTIFY" GridPane.rowIndex="3">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </Label>
-      <CheckBox alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="164.0" text="Marque si usted es socio." textAlignment="RIGHT" GridPane.columnIndex="1" />
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+<BorderPane fx:id="rootLayout" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.ListController">
+   <center>
+      <GridPane minHeight="600.0" minWidth="550.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="76.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="118.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="407.0" minHeight="10.0" prefHeight="233.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <ImageView fx:id="myimageView" fitHeight="162.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="5.0">
-               <image>
-                  <Image url="@../image/panda.png" />
-               </image>
-               <FlowPane.margin>
-                  <Insets />
-               </FlowPane.margin>
-            </ImageView>
-            <Button fx:id="myButton" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#displayImage" prefHeight="25.0" prefWidth="67.0" text="Siguiente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" translateX="150.0">
-               <FlowPane.margin>
-                  <Insets right="60.0" />
-               </FlowPane.margin></Button>
+            <Label text="Socio">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Animal al que ayudar" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Donación" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="combo1" editable="false" prefHeight="25.0" prefWidth="163.0" promptText="Seleccione un valor..." visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TreeView fx:id="tree1" editable="false" prefHeight="160.0" prefWidth="347.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="10.0" right="10.0" />
+               </GridPane.margin>
+            </TreeView>
+            <Label text="Información extra" textAlignment="JUSTIFY" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <CheckBox alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="164.0" text="Marque si usted es socio." textAlignment="RIGHT" GridPane.columnIndex="1" />
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="myimageView" fitHeight="162.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="5.0">
+                     <image>
+                        <Image url="@../image/panda.png" />
+                     </image>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </ImageView>
+                  <Button fx:id="myButton" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#displayImage" prefHeight="25.0" prefWidth="67.0" text="Siguiente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" translateX="150.0">
+                     <FlowPane.margin>
+                        <Insets right="60.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+            <Button fx:id="botonenviame" mnemonicParsing="false" onAction="#enviardonacion" onMouseClicked="#enviardonacion" text="Enviar" textAlignment="CENTER" translateX="145.0" translateY="-2.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
-      </FlowPane>
-   </children>
-</GridPane>
+      </GridPane>
+   </center>
+</BorderPane>
