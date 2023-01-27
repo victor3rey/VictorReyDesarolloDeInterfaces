@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <top>
+      <MenuBar stylesheets="@Style.css" BorderPane.alignment="CENTER">
+        <menus>
+         
+           <Menu mnemonicParsing="false" text="Donar">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirFormulario" text="Abrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarListado" text="Cerrar" />
+             
+            </items>
+          </Menu>
+           <Menu mnemonicParsing="false" text="Miembros">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirFormulario3" text="Abrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarListado" text="Cerrar" />
+            </items>
+          </Menu>  
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirFormulario4" text="Tutorial" />
+              <MenuItem mnemonicParsing="false" onAction="#cerrarListado" text="Cerrar" />
+            </items>
+          </Menu>
+        </menus>
+         <styleClass>
+            <String fx:value="MenuBar" />
+            <String fx:value="menu" />
+         </styleClass>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="625.0" prefWidth="765.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ONG ANIMALS KINGS" translateX="-10.0" translateY="-210.0">
+               <font>
+                  <Font name="Colonna MT" size="72.0" />
+               </font>
+            </Text>
+            <Label>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonMenu" mnemonicParsing="false" onAction="#abrirFormulario2" stylesheets="@Style.css" text="HAZTE SOCIO" textAlignment="CENTER" translateX="-10.0" translateY="171.0">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

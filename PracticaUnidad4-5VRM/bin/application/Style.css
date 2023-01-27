@@ -1,0 +1,33 @@
+.root{
+    -fx-background-image: url("/image/wwf.png")center center cover no-repeat fixed;
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+   
+}
+
+.MenuBar{
+	 -fx-background-color: #000000;
+	
+}
+.menu-bar .label{
+	-fx-text-fill: white;
+	
+}
+
+.menu-item .label{
+    -fx-font-size: 14.0 pt;
+    -fx-text-fill: black;
+}
+    
+ Button {  -fx-background-color:  #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+
