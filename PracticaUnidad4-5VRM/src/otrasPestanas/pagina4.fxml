@@ -8,23 +8,26 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
+<BorderPane prefHeight="617.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" translateX="-27.0">
          <children>
-            <ImageView fitHeight="222.0" fitWidth="318.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/perro.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="PieChartButton" layoutX="357.0" layoutY="84.0" mnemonicParsing="false" onAction="#abrirPieChart" text="PieChart" />
-            <Button layoutX="468.0" layoutY="84.0" mnemonicParsing="false" text="Button" />
-            <Text layoutX="188.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Los Gráficos los encontraremos en los distintos botonoes" wrappingWidth="91.13671875">
+            <Button fx:id="PieChartButton" layoutX="159.0" layoutY="41.0" mnemonicParsing="false" onAction="#abrirPieChart" stylesheets="@../application/Style.css" text="PieChart" translateX="-145.0" />
+            <Button layoutX="120.0" layoutY="41.0" mnemonicParsing="false" stylesheets="@../application/Style.css" text="Button" />
+            <Text layoutX="-23.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Los Gráficos los encontraremos en los distintos botonoes" translateX="-250.0" translateY="75.0" wrappingWidth="105.13671875">
                <font>
                   <Font name="Berlin Sans FB" size="12.0" />
                </font>
             </Text>
+            <Button layoutX="209.0" layoutY="41.0" mnemonicParsing="false" stylesheets="@../application/Style.css" text="Button" />
          </children>
       </AnchorPane>
    </center>
+   <left>
+      <ImageView fitHeight="268.0" fitWidth="392.0" pickOnBounds="true" smooth="false" translateY="225.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../image/perro.png" />
+         </image>
+      </ImageView>
+   </left>
 </BorderPane>
