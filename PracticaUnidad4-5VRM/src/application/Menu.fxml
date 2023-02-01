@@ -28,7 +28,13 @@
                   <MenuItem mnemonicParsing="false" onAction="#abrirFormulario3" text="Abrir" />
                   <MenuItem mnemonicParsing="false" onAction="#cerrarListado" text="Cerrar" />
             </items>
-          </Menu>  
+          </Menu>
+            <Menu mnemonicParsing="false" text="Gráficos">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#abrirFormulario5" onMenuValidation="#cerrarListado" text="Abrir" />
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarListado" text="Cerrar" />
+              </items>
+            </Menu>  
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#abrirFormulario4" text="Tutorial" />
