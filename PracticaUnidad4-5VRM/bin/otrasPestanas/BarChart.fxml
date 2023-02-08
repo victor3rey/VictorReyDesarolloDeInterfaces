@@ -9,9 +9,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
    <children>
-      <BarChart fx:id="barChart" alternativeRowFillVisible="false" barGap="0.0" cacheShape="false" categoryGap="0.0" centerShape="false" pickOnBounds="false" prefHeight="516.0" prefWidth="672.0" scaleShape="false" snapToPixel="false" styleClass="data0" stylesheets="@grafico.css" title="Calificaciones">
+      <BarChart fx:id="barChart" alternativeRowFillVisible="false" barGap="0.0" cacheShape="false" categoryGap="0.0" centerShape="false" pickOnBounds="false" prefHeight="516.0" prefWidth="672.0" scaleShape="false" snapToPixel="false" styleClass="data0" stylesheets="@grafico.css" title="NUMERO DE ANIMALES POR PAIS">
         <xAxis>
-          <CategoryAxis side="BOTTOM" startMargin="0.0" tickLabelGap="0.0" />
+          <CategoryAxis label="PAISES" side="BOTTOM" startMargin="0.0" tickLabelGap="0.0" />
         </xAxis>
         <yAxis>
           <NumberAxis label="ANIMALES" lowerBound="1.0" minorTickCount="1" minorTickLength="0.0" side="LEFT" tickLabelGap="0.0" tickUnit="1.0" upperBound="0.0" />

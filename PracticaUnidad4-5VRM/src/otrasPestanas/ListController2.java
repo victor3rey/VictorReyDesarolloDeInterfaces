@@ -36,12 +36,12 @@ public class ListController2 {
     private void abrirFormulario(ActionEvent event)  {
     	
     	try {
-			// Cargamos el archivo Controles Dinámicos
+			// Cargamos el archivo Controles Dinamicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuController.class.getResource("/otrasPestanas/pagina1.fxml"));
 			BorderPane listadoControles = (BorderPane) loader.load();
 
-			// Se sitúa en el centro del diseño principal
+			// Se situa en el centro del diseno principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -66,14 +66,14 @@ public class ListController  extends Application{
   
 	@FXML
     private void initialize() {   
-        // Controles de JavaFX a los que se añaden directamente los items 
+        // Controles de JavaFX a los que se aï¿½aden directamente los items 
     	// items del ChoiceBox
 		     
 		
     	
         // items del ComboBox
-        combo1.getItems().addAll("50€", "100€", "150€", "200€", "250€", "500€",
-        		"1000€", "1500€", "2000€");
+        combo1.getItems().addAll("50", "100", "150", "200", "250", "500",
+        		"1000", "1500", "2000");
                 
       
     	
@@ -84,12 +84,12 @@ public class ListController  extends Application{
         // item de primer nivel
         TreeItem<String> webItem = new TreeItem<String>("Animales");
         webItem.getChildren().add(new TreeItem<String>("PANDA"));
-        webItem.getChildren().add(new TreeItem<String>("El panda, es una especie de mamífero del orden de los carnívoros. "
-        		+ "El estudio de su ADN lo engloba entre los miembros de la familia de los osos,siendo el oso de anteojos su pariente más cercano, "
+        webItem.getChildren().add(new TreeItem<String>("El panda, es una especie de mamifero del orden de los carnivoros. "
+        		+ "El estudio de su ADN lo engloba entre los miembros de la familia de los osos,siendo el oso de anteojos su pariente mas cercano, "
         		+ "que pertenece a la subfamilia de los tremarctinos"));
         webItem.getChildren().add(new TreeItem<String>("MONO DORADO"));
         webItem.getChildren().add(new TreeItem<String>("El langur chato dorado es una especie de primate catarrino"
-        		+ " de la familia Cercopithecidae endémica de China"));
+        		+ " de la familia Cercopithecidae endimica de China"));
         rootItem.getChildren().add(webItem);
         
         // Otro item de primer nivel
@@ -112,21 +112,21 @@ public class ListController  extends Application{
 		
 		
 		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Confirmar donación?");
+		alert.setTitle("Confirmar donaciï¿½n?");
 		alert.setHeaderText("Responda la siguiente pregunta");
-		alert.setContentText("¿Esta seguro que quiere donar esta cantidad para este animal?");
+		alert.setContentText("ï¿½Esta seguro que quiere donar esta cantidad para este animal?");
 
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == ButtonType.OK){
-			// Cargamos el archivo Controles Dinámicos
+			// Cargamos el archivo Controles Dinamicos
 			try {
-				// Cargamos el archivo Controles Dinámicos
+				// Cargamos el archivo Controles Dinamicos
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(MenuController.class.getResource("/otrasPestanas/pagina3.fxml"));
 				BorderPane listadoControles = (BorderPane) loader.load();
 
 				
-				// Se sitúa en el centro del diseño principal
+				// Se situa en el centro del diseno principal
 				rootLayout.setCenter(listadoControles);
 			} catch (IOException e) {
 				e.printStackTrace();

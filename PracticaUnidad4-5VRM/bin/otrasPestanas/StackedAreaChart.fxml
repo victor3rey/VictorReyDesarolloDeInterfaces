@@ -4,14 +4,14 @@
 <?import javafx.scene.chart.StackedAreaChart?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
    <children>
-      <StackedAreaChart fx:id="stackedAreaChart" title="Calificaciones">
+      <StackedAreaChart fx:id="stackedAreaChart" layoutX="8.0" layoutY="14.0" prefWidth="517.0" stylesheets="@Area.css" title="Donaciones ">
         <xAxis>
           <NumberAxis autoRanging="false" label="Año" lowerBound="2013.0" minorTickCount="1" side="BOTTOM" tickUnit="1.0" upperBound="2020.0" />
         </xAxis>
         <yAxis>
-          <NumberAxis autoRanging="false" label="Nota" minorTickCount="1" side="LEFT" tickUnit="1.0" upperBound="10.0" />
+          <NumberAxis autoRanging="false" label="Cantidad de miles €" minorTickCount="1" side="LEFT" tickLabelGap="2.0" tickUnit="1.0" upperBound="20.0" />
         </yAxis>
       </StackedAreaChart>
    </children>

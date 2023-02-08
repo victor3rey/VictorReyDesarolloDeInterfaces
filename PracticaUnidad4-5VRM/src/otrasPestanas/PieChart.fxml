@@ -5,6 +5,6 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otrasPestanas.Graficovr">
    <children>
-      <PieChart fx:id="pieChart" clockwise="false" legendSide="LEFT" title="Calificaciones" />
+      <PieChart fx:id="pieChart" clockwise="false" legendSide="LEFT" stylesheets="@graficpie.css" title="Numero de osos en el Mundo" />
    </children>
 </AnchorPane>

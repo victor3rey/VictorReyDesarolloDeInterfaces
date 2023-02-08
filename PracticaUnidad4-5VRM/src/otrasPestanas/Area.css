@@ -1,0 +1,26 @@
+.default-color0.chart-area-symbol { -fx-background-color: #e51d2e, #ec5763; }
+.default-color1.chart-area-symbol { -fx-background-color: #ffe65d, #5564eb; }
+
+
+.default-color0.chart-series-area-line { -fx-stroke: #e51d2e; }
+.default-color1.chart-series-area-line { -fx-stroke: #5564eb; }
+
+
+.default-color0.chart-series-area-fill { -fx-fill: #ffa07a55; }
+.default-color1.chart-series-area-fill { -fx-fill: #fffacd55; }
+
+.axis {
+ -fx-font-size: 1.4em;
+ -fx-tick-label-fill: #914800;
+ -fx-font-family:"Tahoma";
+ -fx-tick-length: 20;
+ -fx-minor-tick-length: 10;
+}
+.axis-label {
+ -fx-text-fill: #462300;
+}
+
+.chart-legend {
+   -fx-background-color:  #fafad2;
+   -fx-stroke: #daa520;
+}

@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,16 +17,21 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
 
 
+
+
 public class Graficovr {
 
-	 private Object loader;
+	private Object loader;
 	private Object dialogStage;
 	
 
@@ -55,22 +61,30 @@ public class Graficovr {
 	    private BarChart<String, Number> barChart;
 	    @FXML
 	    private StackedAreaChart<Number, Number> stackedAreaChart;
-
+	    private ObservableList<PieChart.Data> pieData;
+		private ObservableList<XYChart.Series<String, Number>> dist1;
+		private ObservableList<XYChart.Series<Number, Number>> dist2;
 	
 	public ObservableList<PieChart.Data> loadPieData(){
-		// Rellenamos los datos del gráfico
+		// Rellenamos los datos del grafico
 		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("DIW", 7),
-                new PieChart.Data("DI", 6),
-                new PieChart.Data("PSP", 8),
-                new PieChart.Data("PDM", 5),
-                new PieChart.Data("AD", 6),
-                new PieChart.Data("SGE", 4),
-                new PieChart.Data("DWEC", 10),
-                new PieChart.Data("DWES", 3));
+                new PieChart.Data("PANDA", 50),
+                new PieChart.Data("PANDA ROJO", 24),
+                new PieChart.Data("OSO GRIZZLIE", 30),
+                new PieChart.Data("OSO POLAR", 15),
+                new PieChart.Data("OSO PARDO", 95),
+                new PieChart.Data("OSO NEGRO AMERICANO", 14),
+                new PieChart.Data("OSO NEGRO ASIATICO", 25),
+                new PieChart.Data("OSO NEGRO MALAYO", 4));
 		
+		
+		
+        
 		return pieChartData;
 	}
+	
+
+
 	public ObservableList<XYChart.Series<String, Number>> loadDist1(){
 		List<XYChart.Series<String, Number>> list = new ArrayList<XYChart.Series<String,Number>>();
 	
@@ -98,27 +112,27 @@ public class Graficovr {
 	
 		// Se crean dos series con datos
 		XYChart.Series<Number, Number> series1 = new XYChart.Series<Number, Number>();
-		series1.setName("Web");
-		series1.getData().add(new XYChart.Data<Number, Number>(2013, 5, 0.35));
+		series1.setName("Donaciones para el Mono Naranja");
+		series1.getData().add(new XYChart.Data<Number, Number>(2013, 15, 0.35));
 		series1.getData().add(new XYChart.Data<Number, Number>(2014, 7, 0.35));
 		series1.getData().add(new XYChart.Data<Number, Number>(2015, 6, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2016, 4, 0.25));
+		series1.getData().add(new XYChart.Data<Number, Number>(2016, 14, 0.25));
 		series1.getData().add(new XYChart.Data<Number, Number>(2017, 8, 0.35));
 		series1.getData().add(new XYChart.Data<Number, Number>(2018, 9, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2019, 3, 0.15));
+		series1.getData().add(new XYChart.Data<Number, Number>(2019, 13, 0.15));
 		series1.getData().add(new XYChart.Data<Number, Number>(2020, 9, 0.5));
         
 		// Se crean dos series con datos
 		XYChart.Series<Number, Number> series2 = new XYChart.Series<Number, Number>();
-		series2.setName("Multiplataforma");
-		series2.getData().add(new XYChart.Data<Number, Number>(2013, 8, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2014, 5, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2015, 4, 0.25));
-		series2.getData().add(new XYChart.Data<Number, Number>(2016, 7, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2017, 7, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2018, 5, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2019, 9, 0.5));
-		series2.getData().add(new XYChart.Data<Number, Number>(2020, 4, 0.25));
+		series2.setName("Donaciones para el Panda");
+		series2.getData().add(new XYChart.Data<Number, Number>(2013, 16, 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(2014, 13, 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(2015, 10, 0.25));
+		series2.getData().add(new XYChart.Data<Number, Number>(2016, 3, 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(2017, 5, 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(2018, 8, 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(2019, 12, 0.5));
+		series2.getData().add(new XYChart.Data<Number, Number>(2020, 14, 0.55));
 		
 		list.add(series1);
 		list.add(series2);
@@ -126,14 +140,14 @@ public class Graficovr {
         return FXCollections.observableArrayList(list);
 	}
 	
-	 @FXML
+	  @FXML
 	    private void abrirPieChart(ActionEvent event) {
 	    	try {
-	    		// Se crea un nuevo diálogo para mostar el gráfico
+	    		// Se crea un nuevo dialogo para mostar el grafico
 	    		crearDialogo("/otrasPestanas/PieChart.fxml");
 
-		        // Se pasa como parámetro el listado de calificaciones
-	    		 Graficovr controller = ((FXMLLoader) this.loader).getController();
+		        // Se pasa como parametro el listado de calificaciones
+		        Graficovr controller = ((FXMLLoader) this.loader).getController();
 		        controller.setPieData(loadPieData());
 		        controller.initPieChart();
 		        
@@ -142,16 +156,44 @@ public class Graficovr {
 		        e.printStackTrace();
 		    }    	
 	    }
+
+
+	   
+	    
+	// Metodo para inicializar el PieChart
+	    public void initPieChart() {
+			
+	    	pieChart.setData(pieData);
+	    	// Se muestra en cada etiqueta el valor
+		
+	    	final Label caption = new Label("");
+	    	caption.setTextFill(Color.DARKORANGE);
+	    	caption.setStyle("-fx-font: 24 arial;");
+	    	for (final PieChart.Data data : pieChart.getData()) {
+	    	data.setName(data.getName() + "=" + data.getPieValue());
+	    	 data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED,
+	    	 new EventHandler<MouseEvent>() {
+	    	 public void handle(MouseEvent e) {
+	    	 caption.setTranslateX(e.getSceneX());
+	    	 caption.setTranslateY(e.getSceneY());
+	    	 caption.setText(String.valueOf(data.getPieValue()) + "%");
+	    	 }
+	    	 
+	    	 });
+	    	}
+			}
+	    
 	 @FXML
 	    private void abrirBarChart(ActionEvent event) {
 	    	try {
-	    		// Se crea un nuevo diálogo para mostar el gráfico
+	    		// Se crea un nuevo dialogo para mostar el grafico
 	    		crearDialogo("/otrasPestanas/BarChart.fxml");
 
-		        // Se pasa como parámetro el listado de calificaciones
+		        // Se pasa como parametro el listado de calificaciones
 		        Graficovr controller = ((FXMLLoader) this.loader).getController();
 		        controller.setDist1(loadDist1());
 		        controller.initBarChart();
+		        
 		        
 		        ((Stage) this.dialogStage).show();
 		    } catch (IOException e) {
@@ -161,10 +203,10 @@ public class Graficovr {
 	 @FXML
 	    private void abrirStackedAreaChart(ActionEvent event) {
 	    	try {
-	    		// Se crea un nuevo diálogo para mostar el gráfico
+	    		// Se crea un nuevo dialogo para mostar el grï¿½fico
 	    		crearDialogo("/otrasPestanas/StackedAreaChart.fxml");
 
-		        // Se pasa como parámetro el listado de calificaciones
+		        // Se pasa como parametro el listado de calificaciones
 		        Graficovr controller = ((FXMLLoader) this.loader).getController();
 		        controller.setDist2(loadDist2());
 		        controller.initStackedAreaChart();
@@ -177,37 +219,26 @@ public class Graficovr {
 	 
 
 	 private void crearDialogo(String ruta) throws IOException {
-	    	// Carga el fichero XML con el pop up de las estadísticas
+	    	// Carga el fichero XML con el pop up de las estadï¿½sticas
 	        this.loader = new FXMLLoader();
 	        ((FXMLLoader) this.loader).setLocation(Graficovr.class.getResource(ruta));
 	        
-	        // Se carga el diálogo en el objeto Scene y posteriormente en Stage
+	        // Se carga el dialogo en el objeto Scene y posteriormente en Stage
 	        AnchorPane page = (AnchorPane) ((FXMLLoader) loader).load();
 	        this.dialogStage = new Stage();
-	        ((Stage) this.dialogStage).setTitle("Estadísticas de calificaciones");
+	        ((Stage) this.dialogStage).setTitle("Estadï¿½sticas de calificaciones");
 	        ((Stage) this.dialogStage).initModality(Modality.APPLICATION_MODAL);
 	        
 	        Scene scene = new Scene(page);
 	        ((Stage) this.dialogStage).setScene(scene);    	
 	    }
-	 private ObservableList<PieChart.Data> pieData;
-		private ObservableList<XYChart.Series<String, Number>> dist1;
-		private ObservableList<XYChart.Series<Number, Number>> dist2;
+	 	
 		
 
 		   
 		
 
-	    // Método para inicializar el PieChart
-	    public void initPieChart() {
-			pieChart.setData(pieData);
-			
-			// Se muestra en cada etiqueta el valor
-			for (final PieChart.Data data : pieChart.getData()) {
-			    data.setName(data.getName() + "=" + data.getPieValue());
-			}
-	    }
-	 // Método para inicializar el BarChart
+	 // Metodo para inicializar el BarChart
 	    public void initBarChart() {
 	    	barChart.setData(this.dist1);
 	    }

@@ -19,7 +19,7 @@ public class MainPrincipal extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			// Carga el diseño del archivo FXML en la variable rootLayout
+			// Carga el diseno del archivo FXML en la variable rootLayout
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainPrincipal.class.getResource("Menu.fxml"));
 			rootLayout = (BorderPane) loader.load();
@@ -54,6 +54,7 @@ public class MainPrincipal extends Application {
 		            }  
 		        });
 
+		        
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -62,6 +63,7 @@ public class MainPrincipal extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
+		
 	}
 	
 }

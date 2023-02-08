@@ -43,6 +43,45 @@
      -fx-background-position: center;
 	-fx-background-repeat: repeat;
     -fx-background-size:112px;
+    
    
     }     
+    
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
    
+   
+}
+ 
+.chart-legend-item-symbol {
+    -fx-background-color:transparent;
+    -fx-background-size:19px;
+    -fx-background-image: url('/image/bola.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center; 
+    -fx-background-insets: 0,2;
+ 	-fx-background-radius: 5px;
+    
+}
+.chart-legend-item{
+	-fx-background-color:transparent;
+	-fx-background-radius: 5px;
+}
+
+.chart-title {
+  -fx-text-fill: #914800;
+  -fx-font-size: 1.6em;
+}
+   
+   
+.axis {
+ -fx-font-size: 1.4em;
+ -fx-tick-label-fill: #914800;
+ -fx-font-family:"Tahoma";
+ -fx-tick-length: 20;
+ -fx-minor-tick-length: 10;
+}
+.axis-label {
+ -fx-text-fill: #462300;
+}

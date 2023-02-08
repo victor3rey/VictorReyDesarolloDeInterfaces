@@ -91,7 +91,7 @@ public class PersonaController implements Initializable {
 
             // Compruebo si la persona esta en el lista
             if (!this.personas.contains(p)) {
-                // Lo añado a la lista
+                // Lo aï¿½ado a la lista
                 this.personas.add(p);
                 // Seteo los items
                 this.tblPersonas.setItems(personas);
@@ -99,7 +99,7 @@ public class PersonaController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
                 alert.setTitle("Info");
-                alert.setContentText("Persona añadida");
+                alert.setContentText("Persona anadida");
                 alert.showAndWait();
             } else {
 
